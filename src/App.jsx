@@ -22,11 +22,11 @@ export default function App() {
                         </div>
                         <div>
                             {
-                                userData.map(item => <Card key={item.fullName} {...item} />)
+                                userData.length > 0
+                                    ? userData.map(item => <Card key={item.fullName} {...item} />)
+                                    : <p>User not found</p>
                             }
-                            {
-                                <p>User not found</p>
-                            }
+
                         </div>
                     </div>
                 } />
